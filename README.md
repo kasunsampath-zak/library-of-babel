@@ -145,19 +145,44 @@ Error responses are consistent and client-friendly.
 
 ---
 
+## ⚙️ Configuration & Environments
+
+Supports multiple environments using Spring profiles:
+
+- `application-dev.yml` → PostgreSQL (local)
+- `application-prod.yml` → PostgreSQL
+
+Configuration follows [12-Factor App](https://12factor.net/) principles:
+
+- Externalized configuration
+- Environment-specific profiles
+- Stateless service design
+
+---
+
 ## ▶️ Running the Application
 
+### Local (Dev)
+
+```sh
+mvn spring-boot:run
+```
 
 **Swagger UI:**  
 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-### 🐳 Docker 
+### 🐳 Docker (Optional)
 
+**Build image:**
+
+```sh
+docker build -t library-api .
+```
 
 **Run with Docker Compose:**
 
 ```sh
-docker-compose up --build
+docker-compose up
 ```
 
 ---
@@ -174,7 +199,7 @@ _All assumptions are documented intentionally due to unclear requirements._
 
 ---
 
-## 🔮 Future Improvements (to be done)
+## 🔮 Future Improvements
 
 - Borrowing history tracking
 - Pagination & filtering
@@ -192,3 +217,11 @@ Senior Software Engineer
 Java • Spring Boot • Backend Systems
 
 ---
+
+## ✅ Final Notes
+
+This project intentionally prioritizes:
+
+- Clarity over over-engineering
+- Business rules over framework complexity
+- Testability over shortcuts

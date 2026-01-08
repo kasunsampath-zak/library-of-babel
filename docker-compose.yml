@@ -27,7 +27,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_PROFILES_ACTIVE: prod
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/libraryofbabel
       SPRING_DATASOURCE_USERNAME: library_user
       SPRING_DATASOURCE_PASSWORD: library_password
